@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Components/StaticMeshComponent.h"
 #include "TurningEnvironment.generated.h"
 
 UCLASS(Blueprintable)
@@ -23,4 +24,13 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintPure)
+		FVector GetCenterOfMeshes();
+
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* LeftMesh;
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* RightMesh;
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* BottomMesh;
 };
