@@ -7,7 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "TurningEnvironment.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Abstract)
 class GMTK_GAME_JAM_2020_API ATurningEnvironment : public AActor
 {
 	GENERATED_BODY()
